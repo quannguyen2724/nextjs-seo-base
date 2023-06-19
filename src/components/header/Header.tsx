@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ConnectWallet } from '../connectWallet';
 import { Wallet } from '../Wallet';
 
 declare global {
