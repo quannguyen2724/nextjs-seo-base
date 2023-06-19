@@ -1,4 +1,4 @@
-import classes from './connectWallet.module.scss'
+import classes from './items.module.scss'
 
 export const withCssModule = (Component: React.FC<any>) => (props: any) => {
   return (
