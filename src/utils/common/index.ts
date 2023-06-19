@@ -5,7 +5,6 @@ export * from './getAllMethodNames';
 export * from './getAllPrototypeMethodNames';
 export * from './removeEmptyProperties';
 export * from './uploadFileToStorage';
-export * from './displayError';
 export * from './toJson';
 export * from './toText';
 export * from './copy-to-clipboard';

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ConnectWallet } from '../connectWallet';
+import { Wallet } from '../Wallet';
 
 declare global {
   interface Window {
@@ -9,13 +10,11 @@ declare global {
   }
 }
 
-const Header = ({}) => {
+export const Header = ({}) => {
   return (
     <header>
-      <div className='bg-black'>My Next.js App</div>
-      <ConnectWallet></ConnectWallet>
+      <div></div>
+      <Wallet />
     </header>
   );
 };
-
-export default Header;

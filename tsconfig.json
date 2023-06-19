@@ -1,4 +1,5 @@
 {
+  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "lib": [
       "dom",
@@ -21,9 +22,13 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "next.config.js",
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next",
+    "public",
+    "out"
   ]
 }

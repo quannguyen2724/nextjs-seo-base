@@ -1,6 +1,6 @@
-import React from "react";
-import { Redirect, Switch, SwitchProps } from "react-router-dom";
-import { useSdk } from "./wallet";
+import React from 'react';
+import { Redirect, Switch, SwitchProps } from 'react-router-dom';
+import { useSdk } from './wallet';
 
 export interface RedirectLocation {
   readonly redirectPathname: string;
@@ -11,7 +11,11 @@ interface ProtectedSwitchProps extends SwitchProps {
   readonly authPath: string;
 }
 
-export function ProtectedSwitch({ authPath, children, location }: ProtectedSwitchProps): JSX.Element {
+export function ProtectedSwitch({
+  authPath,
+  children,
+  location
+}: ProtectedSwitchProps): JSX.Element {
   const { initialized } = useSdk();
 
   return initialized ? (
@@ -20,7 +24,12 @@ export function ProtectedSwitch({ authPath, children, location }: ProtectedSwitc
     <Redirect
       to={{
         pathname: authPath,
-        state: location ? { redirectPathname: location.pathname, redirectState: location.state } : undefined,
+        state: location
+          ? {
+              redirectPathname: location.pathname,
+              redirectState: location.state
+            }
+          : undefined
       }}
     />
   );
